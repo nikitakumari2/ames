@@ -3,6 +3,7 @@
 
   var styles = document.createElement('style');
   styles.textContent = [
+    'html { scroll-behavior: smooth; }',
     '.ames-progress-bar {',
     '  position: fixed; top: 0; left: 0; height: 3px; background: rgba(201,169,110,0.3);',
     '  width: 100%; z-index: 9999;',
@@ -21,7 +22,13 @@
     '.ames-scroll-top.visible { display: flex; }',
     '@media (max-width: 768px) {',
     '  .ames-scroll-top { width: 40px; height: 40px; bottom: 16px; right: 16px; font-size: 18px; }',
-    '}'
+    '}',
+    '.element-dot {',
+    '  cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;',
+    '}',
+    '.element-dot:hover { transform: scale(1.35); box-shadow: 0 0 16px rgba(0,0,0,0.25); }',
+    '.slide img { transition: opacity 0.3s ease, transform 0.3s ease; }',
+    '.slide img:hover { opacity: 0.92; transform: scale(1.02); }'
   ].join('\n');
   document.head.appendChild(styles);
 
@@ -51,6 +58,13 @@
 
   scrollBtn.addEventListener('click', function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  document.querySelectorAll('.element-dot').forEach(function(el) {
+    el.addEventListener('click', function() {
+      var target = document.getElementById(this.getAttribute('data-slide'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
   });
 
   window.addEventListener('scroll', updateProgress);
