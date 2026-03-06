@@ -3,7 +3,8 @@
 > *A biometric-responsive wellness fragrance system developed for the L'Oréal Brandstorm competition.*
 
 ---
-
+## Website: https://nikitakumari2.github.io/ames/
+---
 ## Overview
 
 **ÂMES** is a first-of-its-kind wellness fragrance concept for L'Oréal Luxe. It transforms daily scent into a personalised nervous system ritual through four emotion-matched elemental fragrances, a smart refillable glass vessel, and an AI companion app that adapts to your physiology in real time.
