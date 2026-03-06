@@ -3,7 +3,7 @@
 > *A biometric-responsive wellness fragrance system developed for the L'Oréal Brandstorm competition.*
 
 ---
-## Website: https://nikitakumari2.github.io/ames/
+### Website: https://nikitakumari2.github.io/ames/
 ---
 ## Overview
 
